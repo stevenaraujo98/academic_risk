@@ -31,3 +31,5 @@
 3. Se descartaron los estudiantes que no estan en admisiones pero si en semestre.
 4. La columna TERMINOS_REGISTRADOS nos permite saber si es el primer semestre ya que existen estudiantes que se retiran despues de pasar el pre y esperan unos semestres para volver.
 
+##### Dato
+Para predecir la probabilidad se usa random forest, regresion logistica, 
