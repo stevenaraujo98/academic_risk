@@ -17,7 +17,7 @@
 - Descargar manualmente en este caso "socioeconomico_17897.csv" usando "socioeconomico_##.sql".
 3. Filtro 1.
 4. Asociarlo con GPA.
-- Descargar manualmente por año y termino en este casi "gpa_general_20##_#S.csv" usando "gpa_estudiante_general_##.sql".
+- Descargar manualmente por año y termino en este caso "gpa_general_20##_#S.csv" usando "gpa_estudiante_general_##.sql".
 - Esto analiza los que tienen y los que no GPA.
 5. Los estudiantes que estudian el mismo año de ingreso quiere decir que son novatos, y se valida si tiene GPA.
 6. Si siendo novato tiene GPA se aplica Filtro 2.
@@ -32,4 +32,5 @@
 4. La columna TERMINOS_REGISTRADOS nos permite saber si es el primer semestre ya que existen estudiantes que se retiran despues de pasar el pre y esperan unos semestres para volver.
 
 ##### Dato
-Para predecir la probabilidad se usa random forest, regresion logistica, 
+Para predecir la probabilidad se usa random forest, regresion logistica, SVC, XGBoost, LightGBM.
+Se probó no supervisado pero no dió buenos resultados, como: KMeans, AgglomerativeClustering, DBSCAN, MeanShift.

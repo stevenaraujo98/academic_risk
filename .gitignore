@@ -3,3 +3,4 @@ queries.py
 **/__pycache__/**
 *.csv
 models/*
+*.sql
