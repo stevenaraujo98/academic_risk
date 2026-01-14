@@ -4,3 +4,4 @@ queries.py
 *.csv
 models/*
 *.sql
+*.pkl

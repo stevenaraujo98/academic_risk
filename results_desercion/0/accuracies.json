@@ -1,0 +1,17 @@
+{
+    "Regresion_Lineal": {
+        "train": 0.9758899931640111,
+        "validation": 0.976494715254772,
+        "test": 0.9758637008991955
+    },
+    "Regresion_Logistica": {
+        "train": 0.9771257296103486,
+        "validation": 0.9772834831992427,
+        "test": 0.9770468528159015
+    },
+    "Random_Forest": {
+        "train": 1.0,
+        "validation": 0.9773623599936898,
+        "test": 0.9772834831992427
+    }
+}
