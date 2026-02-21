@@ -1,0 +1,950 @@
+0     1
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 0
+Deberian ser igual:  True
+Total de repitentes: 1
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 303
+  - Estudiantes que vieron TURG2023: 285
+  - Estudiantes NUEVOS elegibles: 53
+
+Distribución por carrera:
+CARRERA
+Turismo    53
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 53
+
+📊 RESUMEN FINAL:
+  • Repitentes: 1
+  • Nuevos: 53
+  • TOTAL: 54
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        53
+REPITENTE     1
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+   COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+53      201701109       REPITENTE                   RP  2025      2S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      200904373           NUEVO
+1      201413544           NUEVO
+2      201606265           NUEVO
+3      201613460           NUEVO
+4      201705027           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 55 registros
+🔮 Realizando predicciones con 55 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 53 estudiantes aprobarán (96.36%)
+   📊 2 estudiantes reprobarán (3.64%)
+Para la materia objetivo: TURG2023 : DESARROLLO SOSTENIBLE DEL TURISMO
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(31, 7)
+Materia objetivo: FUNDAMENTOS DE PLANIFICACIÓN TURÍSTICA con codigo TURG2024
+(2, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2022 encontrado!
+   Valor original: TURG2022, Valor encoded: 678
+📊 Matrículas encontradas (37): ['202201133', '202415600', '202500724', '202415469', '202415337', '202508370', '202505970', '202501649', '202506010', '202506028', '202502183', '202416699', '202508669', '202503603', '202503595', '202505863', '202504023', '202509493', '202508313', '202504288', '202500070', '202509634', '201915709', '202506325', '202511028', '202000451', '202504940', '202510020', '202406120', '202401717', '202506267', '202402962', '202405551', '202400289', '202314696', '202500328', '202403325']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 37 registros
+🔮 Realizando predicciones con 37 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 35 estudiantes aprobarán (94.59%)
+   📊 2 estudiantes reprobarán (5.41%)
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2035 encontrado!
+   Valor original: TURG2035, Valor encoded: 686
+📊 Matrículas encontradas (37): ['202414074', '202500724', '202508370', '202415337', '202511028', '202505970', '202506028', '202508669', '202508313', '202502183', '202501649', '202509493', '202506010', '202503603', '202500070', '202503595', '202103511', '202505863', '202504940', '202504288', '202416699', '202404604', '202509634', '202504015', '202508610', '202201133', '202507844', '202506325', '202400339', '202405551', '202202784', '202401352', '202405387', '202500328', '202504023', '202405361', '202400289']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 37 registros
+🔮 Realizando predicciones con 37 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 23 estudiantes aprobarán (62.16%)
+   📊 14 estudiantes reprobarán (37.84%)
+(74, 7) (74, 8) APROBADO
+1    58
+0    16
+Name: count, dtype: int64
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2024 encontrado!
+   Valor original: TURG2024, Valor encoded: 680
+📊 Matrículas encontradas (31): ['202208922', '202400297', '202006938', '202405635', '202405742', '202210340', '202208971', '202400362', '202405411', '202405502', '202312765', '202309761', '202403960', '202402566', '202300182', '202102406', '202404000', '202401394', '201309913', '202314670', '202310207', '202402467', '202404133', '202400354', '202401048', '202302733', '202108627', '202215893', '202405247', '202402574', '202010401']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 31 registros
+🔮 Realizando predicciones con 31 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 19 estudiantes aprobarán (61.29%)
+   📊 12 estudiantes reprobarán (38.71%)
+(31, 7) (31, 8) APROBADO
+1    19
+0    12
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 2
+Deberian ser igual:  False
+Total de repitentes: 38
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 409
+  - Estudiantes que vieron TURG2024: 377
+  - Estudiantes NUEVOS elegibles: 76
+
+Distribución por carrera:
+CARRERA
+Turismo    76
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 76
+
+📊 RESUMEN FINAL:
+  • Repitentes: 38
+  • Nuevos: 76
+  • TOTAL: 114
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        76
+REPITENTE    38
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+   COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+76      201309913       REPITENTE                   RP  2025      2S
+77      201711827       REPITENTE                   RP  2022      1S
+78      201800174       REPITENTE                   RP  2020      1S
+79      201805876       REPITENTE                   RP  2020      1S
+80      201808359       REPITENTE                   RP  2020      2S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      201800166           NUEVO
+1      201900222           NUEVO
+2      201907136           NUEVO
+3      201907599           NUEVO
+4      201908969           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 114 registros
+🔮 Realizando predicciones con 114 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 58 estudiantes aprobarán (50.88%)
+   📊 56 estudiantes reprobarán (49.12%)
+Para la materia objetivo: TURG2024 : FUNDAMENTOS DE PLANIFICACIÓN TURÍSTICA
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(25, 7)
+Materia objetivo: MATERIA INTEGRADORA DE TURISMO con codigo TURG2029
+⚠️ No se encontraron prerrequisitos para la materia TURG2029
+Si no hay prerequisito, quiere decir que es de primera linea(por ahora). No se toma en cuenta.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(31, 7)
+Materia objetivo: GESTIÓN HOTELERA con codigo TURG2030
+(2, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+xx Error al analizar con el modelo la materia ADMG2022: too many values to unpack (expected 2)
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2019 encontrado!
+   Valor original: TURG2019, Valor encoded: 675
+📊 Matrículas encontradas (30): ['202402574', '202400032', '202405635', '202400297', '202405742', '202405411', '202405056', '202405502', '202402566', '202312765', '202202537', '202403960', '202313482', '202401394', '202403721', '202313425', '202404000', '202200242', '202400362', '202402467', '202315404', '202404133', '202305694', '202302733', '202401717', '202204426', '202318473', '202207007', '202400107', '202400354']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 30 registros
+🔮 Realizando predicciones con 30 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 30 estudiantes aprobarán (100.00%)
+   📊 0 estudiantes reprobarán (0.00%)
+xx Error en el proceso para TURG2030 - GESTIÓN HOTELERA: 'ADMG2022'
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+(23, 7)
+Materia objetivo: MARKETING TURÍSTICO con codigo TURG2031
+(1, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+xx Error al analizar con el modelo la materia ADMG2030: too many values to unpack (expected 2)
+xx Error en el proceso para TURG2031 - MARKETING TURÍSTICO: 'ADMG2030'
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+(32, 7)
+Materia objetivo: MÉTODOS DE INVESTIGACIÓN EN TURISMO con codigo TURG2032
+(1, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ ESTG2004 encontrado!
+   Valor original: ESTG2004, Valor encoded: 303
+📊 Matrículas encontradas (41): ['202205118', '202307641', '202208922', '202312021', '202400297', '202104527', '202405742', '202111217', '202405635', '202203030', '202318499', '202208971', '202312468', '202300182', '202318523', '202314332', '202300422', '202405411', '202311924', '201915709', '202302667', '202102125', '202315560', '202315404', '202000451', '202304606', '202212726', '202215893', '202010401', '202104592', '202108627', '202108171', '202104238', '202204483', '202203618', '202302733', '201911856', '202202172', '202305256', '202402574', '202212650']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 41 registros
+🔮 Realizando predicciones con 41 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 20 estudiantes aprobarán (48.78%)
+   📊 21 estudiantes reprobarán (51.22%)
+(41, 7) (41, 8) APROBADO
+0    21
+1    20
+Name: count, dtype: int64
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2032 encontrado!
+   Valor original: TURG2032, Valor encoded: 683
+📊 Matrículas encontradas (32): ['202316766', '202305736', '202312526', '202318481', '202310058', '202006938', '202317145', '201901014', '202313086', '202315040', '202110334', '202105441', '202002952', '202205142', '202302402', '202314225', '202310819', '202304176', '202314241', '202315651', '202011482', '202206173', '202205134', '202113189', '202105656', '202111548', '202103958', '202107975', '202000493', '202400354', '202104170', '202110672']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 32 registros
+🔮 Realizando predicciones con 32 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 32 estudiantes aprobarán (100.00%)
+   📊 0 estudiantes reprobarán (0.00%)
+(32, 7) (32, 8) APROBADO
+1    32
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 0
+Deberian ser igual:  True
+Total de repitentes: 2
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 244
+  - Estudiantes que vieron TURG2032: 310
+  - Estudiantes NUEVOS elegibles: 52
+
+Distribución por carrera:
+CARRERA
+Turismo    52
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 52
+
+📊 RESUMEN FINAL:
+  • Repitentes: 2
+  • Nuevos: 52
+  • TOTAL: 54
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        52
+REPITENTE     2
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+   COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+52      201713351       REPITENTE                   RP  2021      2S
+53      201806171       REPITENTE                   RP  2023      2S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      200836781           NUEVO
+1      201128894           NUEVO
+2      201605417           NUEVO
+3      201805868           NUEVO
+4      201809175           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 54 registros
+🔮 Realizando predicciones con 54 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 50 estudiantes aprobarán (92.59%)
+   📊 4 estudiantes reprobarán (7.41%)
+Para la materia objetivo: TURG2032 : MÉTODOS DE INVESTIGACIÓN EN TURISMO
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(41, 7)
+Materia objetivo: PLANIFICACIÓN DE ESPACIOS TURÍSTICOS con codigo TURG2033
+(1, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2024 encontrado!
+   Valor original: TURG2024, Valor encoded: 680
+📊 Matrículas encontradas (31): ['202208922', '202400297', '202006938', '202405635', '202405742', '202210340', '202208971', '202400362', '202405411', '202405502', '202312765', '202309761', '202403960', '202402566', '202300182', '202102406', '202404000', '202401394', '201309913', '202314670', '202310207', '202402467', '202404133', '202400354', '202401048', '202302733', '202108627', '202215893', '202405247', '202402574', '202010401']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 31 registros
+🔮 Realizando predicciones con 31 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 19 estudiantes aprobarán (61.29%)
+   📊 12 estudiantes reprobarán (38.71%)
+(31, 7) (31, 8) APROBADO
+1    19
+0    12
+Name: count, dtype: int64
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2033 encontrado!
+   Valor original: TURG2033, Valor encoded: 684
+📊 Matrículas encontradas (41): ['202316766', '202307641', '202305736', '202312526', '202318481', '202310058', '202312021', '202317145', '202313086', '202315040', '202304317', '202318499', '202302402', '202304176', '202312468', '202314225', '202314332', '202310819', '202212726', '202313425', '202314241', '202318523', '202315651', '202311924', '202305256', '202309860', '202310876', '202316360', '202315404', '202205134', '202011482', '202304762', '202104527', '202202172', '202104592', '202103958', '202304606', '201900149', '202315560', '202302667', '202204483']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 41 registros
+🔮 Realizando predicciones con 41 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 41 estudiantes aprobarán (100.00%)
+   📊 0 estudiantes reprobarán (0.00%)
+(41, 7) (41, 8) APROBADO
+1    41
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 0
+Deberian ser igual:  True
+Total de repitentes: 9
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 338
+  - Estudiantes que vieron TURG2033: 332
+  - Estudiantes NUEVOS elegibles: 38
+
+Distribución por carrera:
+CARRERA
+Turismo    38
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 38
+
+📊 RESUMEN FINAL:
+  • Repitentes: 9
+  • Nuevos: 38
+  • TOTAL: 47
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        38
+REPITENTE     9
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+   COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+38      200836781       REPITENTE                   RP  2021      2S
+39      202011490       REPITENTE                   RP  2023      1S
+40      202102125       REPITENTE                   RP  2024      1S
+41      202103206       REPITENTE                   RP  2023      2S
+42      202107124       REPITENTE                   RP  2024      2S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      201712627           NUEVO
+1      201750130           NUEVO
+2      201900198           NUEVO
+3      201900628           NUEVO
+4      201908142           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 49 registros
+🔮 Realizando predicciones con 49 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 44 estudiantes aprobarán (89.80%)
+   📊 5 estudiantes reprobarán (10.20%)
+Para la materia objetivo: TURG2033 : PLANIFICACIÓN DE ESPACIOS TURÍSTICOS
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(24, 7)
+Materia objetivo: PATRIMONIO NATURAL Y CULTURAL con codigo TURG2034
+(1, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2036 encontrado!
+   Valor original: TURG2036, Valor encoded: 687
+📊 Matrículas encontradas (36): ['202508370', '202308631', '202415337', '202210340', '202500724', '202505970', '202502183', '202208971', '202508669', '202500070', '202506010', '202506028', '202501649', '202508313', '202504288', '202506325', '202103511', '202509493', '202503595', '202504023', '202503603', '202509634', '202505863', '202504015', '201915709', '202201133', '202504940', '202401048', '202405551', '202400289', '202314696', '202511028', '202500328', '202204319', '202400073', '202506267']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 36 registros
+🔮 Realizando predicciones con 36 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 32 estudiantes aprobarán (88.89%)
+   📊 4 estudiantes reprobarán (11.11%)
+(36, 7) (36, 8) APROBADO
+1    32
+0     4
+Name: count, dtype: int64
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2034 encontrado!
+   Valor original: TURG2034, Valor encoded: 685
+📊 Matrículas encontradas (24): ['202208922', '202414496', '202415600', '202414066', '202413365', '202414074', '202414777', '202412441', '202414124', '202413423', '201309913', '202300182', '202102406', '202314670', '202400560', '202414298', '202000451', '202310207', '202405247', '202405015', '202403101', '202402962', '202404604', '201805041']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 24 registros
+🔮 Realizando predicciones con 24 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 24 estudiantes aprobarán (100.00%)
+   📊 0 estudiantes reprobarán (0.00%)
+(24, 7) (24, 8) APROBADO
+1    24
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 0
+Deberian ser igual:  True
+Total de repitentes: 11
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 386
+  - Estudiantes que vieron TURG2034: 466
+  - Estudiantes NUEVOS elegibles: 47
+
+Distribución por carrera:
+CARRERA
+Turismo    47
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 47
+
+📊 RESUMEN FINAL:
+  • Repitentes: 11
+  • Nuevos: 47
+  • TOTAL: 58
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        47
+REPITENTE    11
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+   COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+47      201008679       REPITENTE                   RP  2020      2S
+48      201908027       REPITENTE                   RP  2021      1S
+49      201908571       REPITENTE                   RP  2021      2S
+50      201917333       REPITENTE                   RP  2021      2S
+51      202005419       REPITENTE                   RP  2021      1S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      201900222           NUEVO
+1      201907599           NUEVO
+2      201913084           NUEVO
+3      201915709           NUEVO
+4      202000238           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 59 registros
+🔮 Realizando predicciones con 59 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 57 estudiantes aprobarán (96.61%)
+   📊 2 estudiantes reprobarán (3.39%)
+Para la materia objetivo: TURG2034 : PATRIMONIO NATURAL Y CULTURAL
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(37, 7)
+Materia objetivo: GEOGRAFÍA TURÍSTICA con codigo TURG2035
+(1, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ ARQG2041 encontrado!
+   Valor original: ARQG2041, Valor encoded: 86
+📊 Matrículas encontradas (52): ['202503587', '202307914', '202511911', '202522223', '202009189', '202521837', '202522173', '202109351', '202521654', '202522512', '202517413', '202520391', '202514543', '202317020', '202522926', '202510947', '202502233', '202501623', '202522090', '202510772', '202202537', '201805041', '202522645', '202520508', '202515698', '202521985', '202521563', '202521571', '202521456', '202518700', '202516555', '202520359', '202521803', '202522165', '202521076', '202519443', '202522033', '202516324', '202521548', '202513339', '202523320', '202522413', '202521894', '202522587', '202514899', '202519971', '202520458', '202520516', '202520755', '202516704', '202519120', '202518379']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 52 registros
+🔮 Realizando predicciones con 52 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 52 estudiantes aprobarán (100.00%)
+   📊 0 estudiantes reprobarán (0.00%)
+(52, 7) (52, 8) APROBADO
+1    52
+Name: count, dtype: int64
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2035 encontrado!
+   Valor original: TURG2035, Valor encoded: 686
+📊 Matrículas encontradas (37): ['202414074', '202500724', '202508370', '202415337', '202511028', '202505970', '202506028', '202508669', '202508313', '202502183', '202501649', '202509493', '202506010', '202503603', '202500070', '202503595', '202103511', '202505863', '202504940', '202504288', '202416699', '202404604', '202509634', '202504015', '202508610', '202201133', '202507844', '202506325', '202400339', '202405551', '202202784', '202401352', '202405387', '202500328', '202504023', '202405361', '202400289']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 37 registros
+🔮 Realizando predicciones con 37 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 23 estudiantes aprobarán (62.16%)
+   📊 14 estudiantes reprobarán (37.84%)
+(37, 7) (37, 8) APROBADO
+1    23
+0    14
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 3
+Deberian ser igual:  False
+Total de repitentes: 37
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 498
+  - Estudiantes que vieron TURG2035: 474
+  - Estudiantes NUEVOS elegibles: 66
+
+Distribución por carrera:
+CARRERA
+Turismo    66
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 66
+
+📊 RESUMEN FINAL:
+  • Repitentes: 37
+  • Nuevos: 66
+  • TOTAL: 103
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        66
+REPITENTE    37
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+   COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+66      201412438       REPITENTE                   RP  2022      1S
+67      201511212       REPITENTE                   RP  2020      1S
+68      201607603       REPITENTE                   RP  2022      2S
+69      201806411       REPITENTE                   RP  2020      1S
+70      201904182       REPITENTE                   RP  2020      2S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      201416609           NUEVO
+1      201805041           NUEVO
+2      201900065           NUEVO
+3      201904935           NUEVO
+4      202000238           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 106 registros
+🔮 Realizando predicciones con 106 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 55 estudiantes aprobarán (51.89%)
+   📊 51 estudiantes reprobarán (48.11%)
+Para la materia objetivo: TURG2035 : GEOGRAFÍA TURÍSTICA
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(36, 7)
+Materia objetivo: TEORÍA DEL TURISMO con codigo TURG2036
+(1, 6)
+Tamaño coincide True
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ ARQG2042 encontrado!
+   Valor original: ARQG2042, Valor encoded: 87
+📊 Matrículas encontradas (45): ['202520342', '202511911', '202522223', '202307914', '202009189', '202522173', '202522512', '202109351', '202520391', '202522645', '202520508', '202522926', '202515698', '202521985', '202521563', '202522090', '202521571', '202521456', '202517413', '202518700', '202514543', '202516555', '202521803', '202522165', '202521076', '202519443', '202522033', '202516324', '202521548', '202513339', '202523320', '202522413', '202521894', '202522587', '202514899', '202519971', '202520458', '202515656', '202520516', '202514345', '202520755', '202516704', '202519120', '202521837', '202521654']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 45 registros
+🔮 Realizando predicciones con 45 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 45 estudiantes aprobarán (100.00%)
+   📊 0 estudiantes reprobarán (0.00%)
+(45, 7) (45, 8) APROBADO
+1    45
+Name: count, dtype: int64
+file_dir ../data/riesgo_academico/saved/inference_data.csv
+
+✅ TURG2036 encontrado!
+   Valor original: TURG2036, Valor encoded: 687
+📊 Matrículas encontradas (36): ['202508370', '202308631', '202415337', '202210340', '202500724', '202505970', '202502183', '202208971', '202508669', '202500070', '202506010', '202506028', '202501649', '202508313', '202504288', '202506325', '202103511', '202509493', '202503595', '202504023', '202503603', '202509634', '202505863', '202504015', '201915709', '202201133', '202504940', '202401048', '202405551', '202400289', '202314696', '202511028', '202500328', '202204319', '202400073', '202506267']
+Debe coinicidir la cantidad: True
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 36 registros
+🔮 Realizando predicciones con 36 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 32 estudiantes aprobarán (88.89%)
+   📊 4 estudiantes reprobarán (11.11%)
+(36, 7) (36, 8) APROBADO
+1    32
+0     4
+Name: count, dtype: int64
+Cantidad de estudiantes que cursaron la materia objetivo mas de dos vez sin aprobar: 0
+Deberian ser igual:  True
+Total de repitentes: 14
+📊 Resumen:
+  - Estudiantes con todos los prerrequisitos APROBADOS: 517
+  - Estudiantes que vieron TURG2036: 405
+  - Estudiantes NUEVOS elegibles: 120
+
+Distribución por carrera:
+CARRERA
+Turismo    120
+Name: count, dtype: int64
+🔍 Validación de prerrequisitos por estudiante:
+
+✅ Todos cumplen prerrequisitos: True
+Total estudiantes con prerrequisitos completos: 120
+
+📊 RESUMEN FINAL:
+  • Repitentes: 14
+  • Nuevos: 120
+  • TOTAL: 134
+
+Distribución por tipo:
+TIPO_ESTUDIANTE
+NUEVO        120
+REPITENTE     14
+Name: count, dtype: int64
+
+🔍 Ejemplos de REPITENTES:
+    COD_ESTUDIANTE TIPO_ESTUDIANTE ESTADO_MAT_TOMADA_MO  anio termino
+120      201607603       REPITENTE                   RP  2022      2S
+121      201904182       REPITENTE                   RP  2021      1S
+122      201907615       REPITENTE                   RP  2021      1S
+123      202000311       REPITENTE                   RP  2021      2S
+124      202106969       REPITENTE                   RP  2025      1S
+
+🔍 Ejemplos de NUEVOS:
+  COD_ESTUDIANTE TIPO_ESTUDIANTE
+0      201800083           NUEVO
+1      201803251           NUEVO
+2      201803715           NUEVO
+3      201804044           NUEVO
+4      201805033           NUEVO
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:688: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_seleccion_final["GASTOS_RUBRO"].fillna(df_seleccion_final["GASTOS_RUBRO"].mean(), inplace=True)
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\step1_PAO1.py:721: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_socioeconomico_interes[col] = df_socioeconomico_interes[col].str.lower().str.strip()
+🔍 Verificando valores en cada columna categórica...
+
+Transformando TIPOCOLEGIO...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando BECACOLEGIO...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando COD_MATERIA_ACAD_MO...
+Transformando TIENEDISCAPACIDAD...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando TIPODISCAPACIDAD...
+Transformando ESTADOCIVIL...
+Transformando ESTADOCIVIL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando OTROSIDIOMAS...
+Transformando TIEMPOPROMEDIOLLEGARESPOL...
+Transformando NIVELINGLES...
+Transformando NIVELINSTRUCCIONPADRE...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando NIVELINSTRUCCIONMADRE...
+Transformando ESTADOCIVILPADRES...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARDISCAPACIDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando FAMILIARENFERMEDAD...
+Transformando TIPOPARROQUIA...
+Transformando VIVEGRUPOFAMILIAR...
+Transformando SEXO...
+Transformando PERDIO_CARRERA...
+Transformando termino...
+📊 Usando DataFrame proporcionado
+   ✅ Datos cargados: 135 registros
+🔮 Realizando predicciones con 135 registros...
+** tmp_categoria_riesgo <class 'pandas.core.arrays.categorical.Categorical'>
+C:\Users\saraujo\Documents\Riesgo academico\Codigos_riesgo_academico\planificacion_aprobacion\inference.py:148: FutureWarning: Categorical.to_list is deprecated and will be removed in a future version. Use obj.tolist() instead
+  results["CATEGORIA_RIESGO"] = tmp_categoria_riesgo.to_list()
+   ✅ Probabilidades calculadas
+   ✅ Predicciones completadas
+   📊 123 estudiantes aprobarán (91.11%)
+   📊 12 estudiantes reprobarán (8.89%)
+Para la materia objetivo: TURG2036 : TEORÍA DEL TURISMO
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+⚠️ Materia TURG2037 está en la lista de materias objetivo. Saltando este ciclo.

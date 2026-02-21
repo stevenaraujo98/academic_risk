@@ -2,6 +2,7 @@
 queries.py
 **/__pycache__/**
 *.csv
+*.xlsx
 models/*
 *.sql
 *.pkl
